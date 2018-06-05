@@ -5,7 +5,8 @@
 
     <h1>id = {{ $task->id }} Tasks</h1>
 
-    <p>{{ $task->content }}</p>
+    <p>Status: {{ $task->status }}</p>
+    <p>Tasks: {{ $task->content }}</p>
 
     {!! link_to_route('tasks.edit', 'Edit this task', ['id' => $task->id]) !!}
     
