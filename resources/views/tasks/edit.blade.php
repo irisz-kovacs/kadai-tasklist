@@ -4,17 +4,24 @@
 @section('content')
 
     <h1>id: {{ $task->id }} Edit Tasks</h1>
-
+    <div class="row">
+        <div class="col-xs-6">
+            
     {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
 
-        {!! Form::label('status', 'Status:') !!}
-        {!! Form::text('status') !!}
+                <div class="form-group">
+                    {!! Form::label('status', 'Status:') !!}
+                    {!! Form::text('status', null, ['class' => 'form-control']) !!}
+                </div>
         
-        {!! Form::label('content', 'Task:') !!}
-        {!! Form::text('content') !!}
+                <div class="form-group">
+                    {!! Form::label('content', 'Task:') !!}
+                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
+                </div>
 
-        {!! Form::submit('Update') !!}
+        {!! Form::submit('Update',['class' => 'btn btn-default']) !!}
 
     {!! Form::close() !!}
-
+        </div>
+    </div>
 @endsection
