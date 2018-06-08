@@ -9,7 +9,7 @@
      <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>id</th>
+                    <th>ID</th>
                     <th>Status</th>
                     <th>Task</th>
                 </tr>
@@ -18,7 +18,7 @@
         @foreach ($tasks as $task)
          <tr>
         <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td> 
-        <td>{{ $task->status }} - </td>
+        <td>{{ $task->status }} </td>
         <td>{{ $task->content }}</td>
         @endforeach  
         
