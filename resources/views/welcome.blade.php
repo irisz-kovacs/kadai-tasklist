@@ -8,7 +8,7 @@
         <div class="center jumbotron">
             <div class="text-center">
                 <h1>Welcome to MyTaskList</h1>
-                {!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-primary']) !!}
+                {!! link_to_route('login', 'Log in to Access!', null, ['class' => 'btn btn-lg btn-danger']) !!}
             </div>
         </div>
     @endif
